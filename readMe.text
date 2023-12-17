@@ -1,0 +1,8 @@
+if we use new Date(), we get the current date, if you want to set date to particular date, then you should add parameter to Date().
+
+lets say you want to set a giveaway for a product and it date is, 2023 december 20 9:30pm, you should do it like:
+
+var giveawayDate = new Date(2023, 11, 20, 21, 30, 0);
+
+*** Months are index base, wich means that it start from 0 to 11 ***
+*** Hours are 24 base, wich means 21:30 = 9:30pm ***
