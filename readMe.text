@@ -6,3 +6,36 @@ var giveawayDate = new Date(2023, 11, 20, 21, 30, 0);
 
 *** Months are index base, wich means that it start from 0 to 11 ***
 *** Hours are 24 base, wich means 21:30 = 9:30pm ***
+------------------------------------------------------------------------------------------------------------------
+
+Now that we set day of giveaway, we need to calculate today and day future and subtract tehm.
+
+In order to know which day we are at, use new date.
+
+in order to know how many days/ time remain we need to define a function that do that, also we need to know how many days, hours, minuts and secends left.
+
+Each secend is 1000ms
+
+Each minuts is 60s
+
+Each hour is 60min
+
+Each day is 24h
+
+Know that we set our variables, we should define a function that calculate how much days, hours, mins and secs left
+
+after that, we need to make an array and put day, hour, min and sec in it
+
+Now we should get our element and change innerHTML, since we have 4 item, and we use querySelctoreAll and give it a name as items, we use forEach()
+
+Now we calculated our remaining time, next step is count-down items insted of refresh the page each secends!
+
+to do that, we need to assigne a variable outside of getRemainTime function because of scope
+
+The variable assigne to setInterval(), and parameters are getRemainTime() and how many ms it should count-down
+
+*** Because you calculated secends and give it to element, the setInterval delay will not decrease, but you can increase delay only***
+
+-------------------------------------------------------------------------
+
+Now that we start our count-down and it work properly, we need to make a function that say if item (day, hour, min and secs) is equl to 0, then stop setInterval() and change the html that say "Sorry, giveaway deadline is expired".
